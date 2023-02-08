@@ -1,0 +1,36 @@
+Instructions on how to download and set up php
+
+1)
+https://windows.php.net/download#php-8.1
+download the nonthread version idk the reasoning but the php community said it is the common one
+
+2)
+once the file is downloaded extracted the file
+
+3)
+copy the file over to your program files 
+
+4) 
+go into that folder and copy the path
+
+5)
+open settings and type in systems enviroment
+
+6)
+locate path and add a new path with the path you have copied
+
+7)
+open cml and type in php --version
+
+8) 
+validate that you have php installed
+
+9) 
+look up php composer and download the latest version - php uses composer as oppose to npm
+
+10) OPTIONAL
+run this command to install the dependencies with the laravel framework - most pop php framework
+composer create-project --prefer-dist laravel/laravel instance_name
+
+11) OR
+start playing around with php, I just thought using a framework would make the most sense but it really is up to yall
