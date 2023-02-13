@@ -7,7 +7,7 @@
 </head>
 <body>
 
-  <div class="flex justify-center items-center bg-rose-50  mx-auto">
+  <div class="flex justify-center items-center mx-auto" id="backgroundcolor">
   <section class="h-full gradient-form md:h-screen">
 
   <div class="container py-12 px-6 h-full">
@@ -22,11 +22,13 @@
                 <img src="{{asset('assets/images/Meridian.jpg')}}" class="object-contain hover:object-scale-down">
      
                 </div>
-                <form>
+                <form action="{{ route('login') }}" method="post">             
+                     @csrf
                   <p class="mt-12 mb-4">Please login to your account</p>
                   <div class="mb-4">
                     <input
                       type="text"
+                      name="username"
                       class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                       id="exampleFormControlInput1"
                       placeholder="Username"
@@ -34,18 +36,22 @@
                   </div>
                   <div class="mb-4">
                     <input
-                      type="password"
+                      type="text"
+                      name="password"
                       class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                       id="exampleFormControlInput1"
                       placeholder="Password"
                     />
                   </div>
                   <div class="text-center pt-1 mb-12 pb-1">
+
+
                     <button
-                      class="bg-gradient-to-r from-rose-300 to-rose-500 inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3"
+                      class="bg-gradient-to-r  from-teal-200 to-lime-200 inline-block px-6 py-2.5 text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3"
                       type="button"
                       data-mdb-ripple="true"
                       data-mdb-ripple-color="light"
+                      onclick = ""
             
                     >
                       Log in
@@ -55,22 +61,20 @@
                   <div class="flex items-center justify-between pb-6">
                     <p class="mb-0 mr-2">Don't have an account?</p>
                     <button
-                      type="button"
-                      class="inline-block px-6 py-2 border-2 border-red-600 text-red-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-                      data-mdb-ripple="true"
-                      data-mdb-ripple-color="light"
+                      type="submit"
+                   
                     >
-                      Danger
+                   
                     </button>
                   </div>
                 </form>
               </div>
             </div>
             <div
-              class="lg:w-6/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none bg-gradient-to-r from-rose-300 to-rose-500"
+              class="lg:w-6/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none bg-gradient-to-r from-teal-200 to-lime-200"
            
             >
-              <div class="text-white px-4 py-6 md:p-12 md:mx-6">
+              <div class="text-black px-4 py-6 md:p-12 md:mx-6">
                 <h4 class="text-xl font-semibold mb-6">About Meridian Brands</h4>
                 <p class="text-sm">
                 Meridian Brands was formed in 2021 when it assumed ownership of HMS Productions LLC, a longtime industry leader in the design, sourcing, manufacturing, and distribution of branded and private label women's apparel.
