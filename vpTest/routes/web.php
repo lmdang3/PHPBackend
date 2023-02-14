@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,9 +26,10 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::post('/your-route', 'YourController@yourMethod')->name('your-route');
 
-Route::post('/login', 'AuthController@login')->name('login');
+Route::post('dashboard', [DashboardController::class, 'index']);
+// Route::post('/dashboard', 'DashboardController@index')->name('dashboard');
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+
 

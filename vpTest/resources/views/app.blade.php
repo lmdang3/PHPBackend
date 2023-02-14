@@ -6,10 +6,8 @@
   @vite('resources/css/app.css')
 </head>
 <body>
-
   <div class="flex justify-center items-center mx-auto" id="backgroundcolor">
   <section class="h-full gradient-form md:h-screen">
-
   <div class="container py-12 px-6 h-full">
     <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
       <div class="xl:w-10/12">
@@ -20,9 +18,8 @@
                 <div class="text-center">
                 <!-- <img src="https://images.squarespace-cdn.com/content/605cc118eecb642a7e9e2cfa/1617046226791-KLDDBCH39KZ0UULHHGBO/Meridian_Logo_Burnet-Blue.png?format=1500w&content-type=image%2Fpng"> -->
                 <img src="{{asset('assets/images/Meridian.jpg')}}" class="object-contain hover:object-scale-down">
-     
                 </div>
-                <form action="{{ route('login') }}" method="post">             
+                <form action="dashboard" method="post">
                      @csrf
                   <p class="mt-12 mb-4">Please login to your account</p>
                   <div class="mb-4">
@@ -44,15 +41,12 @@
                     />
                   </div>
                   <div class="text-center pt-1 mb-12 pb-1">
-
-
                     <button
                       class="bg-gradient-to-r  from-teal-200 to-lime-200 inline-block px-6 py-2.5 text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3"
-                      type="button"
+                      type="submit"
                       data-mdb-ripple="true"
                       data-mdb-ripple-color="light"
-                      onclick = ""
-            
+                      value="Submit"
                     >
                       Log in
                     </button>
@@ -61,13 +55,14 @@
                   <div class="flex items-center justify-between pb-6">
                     <p class="mb-0 mr-2">Don't have an account?</p>
                     <button
-                      type="submit"
+                      type="button"
                    
                     >
                    
                     </button>
                   </div>
                 </form>
+
               </div>
             </div>
             <div
