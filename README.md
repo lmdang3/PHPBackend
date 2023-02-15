@@ -7,3 +7,17 @@ cd vptest
 
 terminal 1: npm run dev
 terminal 2: php artisan serve
+
+
+Clear Application Cache
+php artisan session:clear
+
+
+Clear Route Cache
+php artisan route:clear
+
+Clear Configuration Cache
+php artisan config:clear
+
+Clear Compiled Views Cache
+php artisan view:clear

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,23 +14,20 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/login', [AuthController::class,'loginForm']);
+Route::post('/login', [AuthController::class,'login']);
 
-Route::get('/', function () {
-    return view('app');
+Route::post('/logout', [AuthController::class, 'logoutAction']);
+Route::get('/logout', function () {
+    return view('logout');
 });
 
-
-Route::get('/welcome', function () {
-    return view('welcome');
+Route::middleware('logged_in')->group(function () {
+    Route::get('/', function () {
+        return view('app');
+    });
+    // Route::post('/logout', [AuthController::class,'logout']);
+    // Route::post('/logout', function () {
+    //     return redirect('login')
+    // });
 });
-
-
-Route::post('dashboard', [DashboardController::class, 'index']);
-// Route::post('/dashboard', 'DashboardController@index')->name('dashboard');
-
-
-
-
