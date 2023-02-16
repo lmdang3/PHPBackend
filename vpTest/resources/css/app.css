@@ -5,4 +5,24 @@
 
 
 
+/* This is for an ID */
 #backgroundcolor { background-color: #d7efdf; }
+
+/* https://gradients.shecodes.io/gradients/863 */
+#logoutButton {background: linear-gradient(to top, #e6b980 0%, #eacda3 100%)}
+
+/* This is for a div class */
+
+.white-text {
+  filter: invert(100%);
+}
+
+
+.container-narrow {
+    max-width: 1200px; /* adjust the width to your desired value */
+    margin: 0 auto; /* center the container horizontally */
+  }
+  
+  .container-narrow .lg:w-full {
+    display: none; /* hide the large image */
+  }
