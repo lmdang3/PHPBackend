@@ -24,10 +24,9 @@ Route::get('/logout', function () {
 
 Route::middleware('logged_in')->group(function () {
     Route::get('/', function () {
-        return view('app');
+        return view('layouts.app');
     });
-    // Route::post('/logout', [AuthController::class,'logout']);
-    // Route::post('/logout', function () {
-    //     return redirect('login')
-    // });
+    Route::get('/label', function () {
+        return view('/label');
+    });
 });

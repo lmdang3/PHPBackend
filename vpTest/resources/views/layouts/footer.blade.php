@@ -1,5 +1,5 @@
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-<footer class="flex items-center justify-between flex-wrap bg-gray-800 p-6 text-white">
+<footer class="flex items-center justify-between flex-wrap bg-gray-800 p-2 text-white">
     <div>
         <!-- Made a custom css that turns the brightness down and inverts the color for the text to be white  -->
         <img src="{{asset('assets/images/Meridian.jpg')}}" class="object-contain hover:object-scale-down" width="10%"
