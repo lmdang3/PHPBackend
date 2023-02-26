@@ -9,8 +9,8 @@ terminal 1: npm run dev
 terminal 2: php artisan serve
 
 
-Clear Application Cache
-php artisan session:clear
+Clear Application Cache does not work
+php artisan cache:clear
 
 
 Clear Route Cache

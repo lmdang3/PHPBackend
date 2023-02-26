@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Log;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,7 +27,9 @@ class AppServiceProvider extends ServiceProvider
     {
         try {
             DB::connection()->getPdo();
-            echo "Successfully connected to the database!";
+            Log::info("Successfully connected to the database!");
+            // will log server side
+            // echo "Successfully connected to the database!";
         } catch (\Exception $e) {
             die("Could not connect to the database. Error message: " . $e->getMessage());
         }
